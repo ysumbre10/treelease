@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Lease - Lease a Tree, Own the Yield | AuroVil Asset Management</title>
+    <meta name="description" content="Tree Lease is India's first Agri-FinTech platform enabling you to lease fruit-bearing trees as micro-assets. Enjoy premium produce and earn passive income.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌳</text></svg>">
+    <script>
+        // Apply saved theme before paint to prevent flash
+        (function() {
+            var theme = localStorage.getItem('treelease-theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="leaf-icon">🌿</div>
+            <span>Tree Lease</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🌳</span>
+                <span class="logo-text">Tree<span class="logo-highlight">Lease</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#how-it-works" class="nav-link" data-section="how-it-works">How It Works</a>
+                <a href="#marketplace" class="nav-link" data-section="marketplace">Marketplace</a>
+                <a href="#calculator" class="nav-link" data-section="calculator">Calculator</a>
+                <a href="#impact" class="nav-link" data-section="impact">Impact</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#faq" class="nav-link" data-section="faq">FAQ</a>
+            </div>
+            <div class="nav-right-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-toggle-track">
+                        <span class="theme-toggle-icon sun">☀️</span>
+                        <span class="theme-toggle-icon moon">🌙</span>
+                        <span class="theme-toggle-thumb"></span>
+                    </span>
+                </button>
+                <a href="#marketplace" class="nav-btn-primary">Lease a Tree</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-effects">
+            <div class="floating-leaf leaf-1">🍃</div>
+            <div class="floating-leaf leaf-2">🌿</div>
+            <div class="floating-leaf leaf-3">🍂</div>
+            <div class="floating-leaf leaf-4">🌱</div>
+            <div class="floating-leaf leaf-5">🍃</div>
+            <div class="hero-gradient-orb orb-1"></div>
+            <div class="hero-gradient-orb orb-2"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-on-scroll">
+                    <span class="badge-dot"></span>
+                    India's First Agri-FinTech Tree Leasing Platform
+                </div>
+                <h1 class="hero-title animate-on-scroll">
+                    Lease a Tree.<br>
+                    <span class="gradient-text">Own the Yield.</span>
+                </h1>
+                <p class="hero-subtitle animate-on-scroll">
+                    Lease fruit-bearing trees across India's best orchards. Get fresh,
+                    chemical-free produce at your doorstep and earn from the surplus
+                    harvest - all without touching a farm.
+                </p>
+                <div class="hero-cta-group animate-on-scroll">
+                    <a href="#marketplace" class="btn btn-primary btn-lg">
+                        <span>Start Leasing</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-glass btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                        <span>See How It Works</span>
+                    </a>
+                </div>
+                <div class="hero-stats animate-on-scroll">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="5000">0</span>+
+                        <span class="hero-stat-label">Trees Available</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="120">0</span>+
+                        <span class="hero-stat-label">Partner Farms</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number" data-target="98">0</span>%
+                        <span class="hero-stat-label">Yield Delivered</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-on-scroll">
+                <div class="hero-card-stack">
+                    <div class="hero-tree-card card-back-2">
+                        <div class="htc-emoji">🥭</div>
+                    </div>
+                    <div class="hero-tree-card card-back-1">
+                        <div class="htc-emoji">🌴</div>
+                    </div>
+                    <div class="hero-tree-card card-front">
+                        <div class="htc-badge">Live Tracking</div>
+                        <div class="htc-emoji-large">🌳</div>
+                        <div class="htc-name">Alphonso Mango Tree</div>
+                        <div class="htc-location">📍 Ratnagiri, Maharashtra</div>
+                        <div class="htc-details">
+                            <div class="htc-detail">
+                                <span class="htc-detail-label">Expected Yield</span>
+                                <span class="htc-detail-value">~40 kg/season</span>
+                            </div>
+                            <div class="htc-detail">
+                                <span class="htc-detail-label">Annual Return</span>
+                                <span class="htc-detail-value highlight">12-18%</span>
+                            </div>
+                        </div>
+                        <div class="htc-progress">
+                            <div class="htc-progress-label">
+                                <span>Growth Stage</span>
+                                <span>Fruiting 🥭</span>
+                            </div>
+                            <div class="htc-progress-bar">
+                                <div class="htc-progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <button class="htc-btn">View Tree Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-bar-inner">
+                <div class="trust-item">
+                    <span class="trust-icon">🔒</span>
+                    <span>SEBI Compliant</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🌱</span>
+                    <span>100% Organic Certified</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">📡</span>
+                    <span>GPS-Tracked Assets</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🛡️</span>
+                    <span>1+1 Yield Protection</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">🏢</span>
+                    <span>AuroVil Asset Mgmt.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How Tree Lease Works</h2>
+                <p class="section-subtitle">Pick a tree, track its growth, and start earning - four steps is all it takes.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card animate-on-scroll" data-step="01">
+                    <div class="step-icon-wrapper">
+                        <div class="step-icon">🔍</div>
+                        <div class="step-number">01</div>
+                    </div>
+                    <h3>Choose Your Tree</h3>
+                    <p>Browse GPS-tagged, verified fruit trees from orchards across India. Pick the one that fits your budget.</p>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="step-card animate-on-scroll" data-step="02">
+                    <div class="step-icon-wrapper">
+                        <div class="step-icon">📝</div>
+                        <div class="step-number">02</div>
+                    </div>
+                    <h3>Lease & Own the Yield</h3>
+                    <p>Sign a digital lease. Your tree gets a unique Asset ID and a Digital Twin so you can track everything online.</p>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="step-card animate-on-scroll" data-step="03">
+                    <div class="step-icon-wrapper">
+                        <div class="step-icon">📊</div>
+                        <div class="step-number">03</div>
+                    </div>
+                    <h3>Track Growth Live</h3>
+                    <p>Get bloom reports, growth photos, and soil health updates straight to your dashboard as your tree grows.</p>
+                    <div class="step-connector"></div>
+                </div>
+                <div class="step-card animate-on-scroll" data-step="04">
+                    <div class="step-icon-wrapper">
+                        <div class="step-icon">🥭</div>
+                        <div class="step-number">04</div>
+                    </div>
+                    <h3>Harvest & Earn</h3>
+                    <p>Fresh produce shows up at your door. Whatever's left gets sold commercially, and you get your cut of the revenue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 1+1 Promise -->
+    <section class="section yield-protection">
+        <div class="container">
+            <div class="yp-grid">
+                <div class="yp-content animate-on-scroll">
+                    <span class="section-tag">Risk Protection</span>
+                    <h2 class="section-title">The 1+1 Yield<br><span class="gradient-text">Protection Promise</span></h2>
+                    <p>Farming has good years and bad years. We don't pretend otherwise. Our 1+1 model is built to make sure you get what you signed up for.</p>
+                    <div class="yp-features">
+                        <div class="yp-feature">
+                            <div class="yp-feature-icon">📅</div>
+                            <div>
+                                <h4>1 Year Standard Lease</h4>
+                                <p>Your standard lease with committed yield targets and full tracking of your tree.</p>
+                            </div>
+                        </div>
+                        <div class="yp-feature">
+                            <div class="yp-feature-icon">🛡️</div>
+                            <div>
+                                <h4>+1 Year Buffer - Free</h4>
+                                <p>If your tree has a rough season, the lease extends by a year at no extra charge. Simple as that.</p>
+                            </div>
+                        </div>
+                        <div class="yp-feature">
+                            <div class="yp-feature-icon">🤝</div>
+                            <div>
+                                <h4>Long-Term Trust</h4>
+                                <p>We're in this for the long run. You get honest reporting and a fair deal every season.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yp-visual animate-on-scroll">
+                    <div class="yp-card">
+                        <div class="yp-card-header">
+                            <span>Your Yield Protection</span>
+                            <span class="yp-active-badge">Active</span>
+                        </div>
+                        <div class="yp-timeline">
+                            <div class="yp-timeline-item active">
+                                <div class="yp-tl-dot"></div>
+                                <div class="yp-tl-content">
+                                    <span class="yp-tl-label">Year 1 - Standard Lease</span>
+                                    <div class="yp-tl-bar">
+                                        <div class="yp-tl-fill" style="width: 100%"></div>
+                                    </div>
+                                    <span class="yp-tl-status">Guaranteed Yield Period</span>
+                                </div>
+                            </div>
+                            <div class="yp-timeline-item buffer">
+                                <div class="yp-tl-dot"></div>
+                                <div class="yp-tl-content">
+                                    <span class="yp-tl-label">+1 Year - Buffer Protection</span>
+                                    <div class="yp-tl-bar buffer-bar">
+                                        <div class="yp-tl-fill buffer-fill" style="width: 60%"></div>
+                                    </div>
+                                    <span class="yp-tl-status">Free Yield Insurance</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yp-card-footer">
+                            <div class="yp-stat">
+                                <span class="yp-stat-value">100%</span>
+                                <span class="yp-stat-label">Yield Commitment</span>
+                            </div>
+                            <div class="yp-stat">
+                                <span class="yp-stat-value">0</span>
+                                <span class="yp-stat-label">Extra Cost</span>
+                            </div>
+                            <div class="yp-stat">
+                                <span class="yp-stat-value">2x</span>
+                                <span class="yp-stat-label">Safety Window</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace -->
+    <section class="section marketplace" id="marketplace">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Marketplace</span>
+                <h2 class="section-title">Choose Your Tree</h2>
+                <p class="section-subtitle">Every tree is GPS-tagged and verified. You'll know exactly where it is, how it's doing, and what it produces.</p>
+            </div>
+            <div class="marketplace-filters animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">All Trees</button>
+                <button class="filter-btn" data-filter="mango">Mango</button>
+                <button class="filter-btn" data-filter="coconut">Coconut</button>
+                <button class="filter-btn" data-filter="cashew">Cashew</button>
+                <button class="filter-btn" data-filter="sapota">Sapota</button>
+            </div>
+            <div class="tree-grid">
+                <div class="tree-card animate-on-scroll" data-type="mango">
+                    <div class="tree-card-image mango-bg">
+                        <span class="tree-card-emoji">🥭</span>
+                        <div class="tree-card-badges">
+                            <span class="badge badge-popular">Best Seller</span>
+                            <span class="badge badge-limited">Only 23 Left</span>
+                        </div>
+                    </div>
+                    <div class="tree-card-body">
+                        <div class="tree-card-header">
+                            <h3>Alphonso Mango</h3>
+                            <span class="tree-card-id">#TL-MH-2847</span>
+                        </div>
+                        <p class="tree-card-location">📍 Ratnagiri, Maharashtra</p>
+                        <div class="tree-card-specs">
+                            <div class="spec">
+                                <span class="spec-label">Age</span>
+                                <span class="spec-value">8-12 yrs</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Yield</span>
+                                <span class="spec-value">~40 kg</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Return</span>
+                                <span class="spec-value highlight">12-18%</span>
+                            </div>
+                        </div>
+                        <div class="tree-card-footer">
+                            <div class="tree-card-price">
+                                <span class="price-label">Lease from</span>
+                                <span class="price-value">&#8377;4,999<span class="price-period">/year</span></span>
+                            </div>
+                            <button class="btn btn-primary btn-sm">Lease Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-card animate-on-scroll" data-type="coconut">
+                    <div class="tree-card-image coconut-bg">
+                        <span class="tree-card-emoji">🌴</span>
+                        <div class="tree-card-badges">
+                            <span class="badge badge-new">New</span>
+                        </div>
+                    </div>
+                    <div class="tree-card-body">
+                        <div class="tree-card-header">
+                            <h3>Tender Coconut</h3>
+                            <span class="tree-card-id">#TL-KA-1034</span>
+                        </div>
+                        <p class="tree-card-location">📍 Mangalore, Karnataka</p>
+                        <div class="tree-card-specs">
+                            <div class="spec">
+                                <span class="spec-label">Age</span>
+                                <span class="spec-value">10-15 yrs</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Yield</span>
+                                <span class="spec-value">~150 nuts</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Return</span>
+                                <span class="spec-value highlight">10-14%</span>
+                            </div>
+                        </div>
+                        <div class="tree-card-footer">
+                            <div class="tree-card-price">
+                                <span class="price-label">Lease from</span>
+                                <span class="price-value">&#8377;3,499<span class="price-period">/year</span></span>
+                            </div>
+                            <button class="btn btn-primary btn-sm">Lease Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-card animate-on-scroll" data-type="cashew">
+                    <div class="tree-card-image cashew-bg">
+                        <span class="tree-card-emoji">🌰</span>
+                        <div class="tree-card-badges">
+                            <span class="badge badge-premium">Premium</span>
+                        </div>
+                    </div>
+                    <div class="tree-card-body">
+                        <div class="tree-card-header">
+                            <h3>Goan Cashew</h3>
+                            <span class="tree-card-id">#TL-GA-0582</span>
+                        </div>
+                        <p class="tree-card-location">📍 Bicholim, Goa</p>
+                        <div class="tree-card-specs">
+                            <div class="spec">
+                                <span class="spec-label">Age</span>
+                                <span class="spec-value">6-10 yrs</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Yield</span>
+                                <span class="spec-value">~15 kg</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Return</span>
+                                <span class="spec-value highlight">14-20%</span>
+                            </div>
+                        </div>
+                        <div class="tree-card-footer">
+                            <div class="tree-card-price">
+                                <span class="price-label">Lease from</span>
+                                <span class="price-value">&#8377;5,999<span class="price-period">/year</span></span>
+                            </div>
+                            <button class="btn btn-primary btn-sm">Lease Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-card animate-on-scroll" data-type="sapota">
+                    <div class="tree-card-image sapota-bg">
+                        <span class="tree-card-emoji">🫐</span>
+                        <div class="tree-card-badges">
+                            <span class="badge badge-new">New</span>
+                            <span class="badge badge-limited">Only 15 Left</span>
+                        </div>
+                    </div>
+                    <div class="tree-card-body">
+                        <div class="tree-card-header">
+                            <h3>Sapota (Chikoo)</h3>
+                            <span class="tree-card-id">#TL-GJ-0791</span>
+                        </div>
+                        <p class="tree-card-location">📍 Navsari, Gujarat</p>
+                        <div class="tree-card-specs">
+                            <div class="spec">
+                                <span class="spec-label">Age</span>
+                                <span class="spec-value">5-8 yrs</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Yield</span>
+                                <span class="spec-value">~60 kg</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Return</span>
+                                <span class="spec-value highlight">11-16%</span>
+                            </div>
+                        </div>
+                        <div class="tree-card-footer">
+                            <div class="tree-card-price">
+                                <span class="price-label">Lease from</span>
+                                <span class="price-value">&#8377;3,999<span class="price-period">/year</span></span>
+                            </div>
+                            <button class="btn btn-primary btn-sm">Lease Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="marketplace-cta animate-on-scroll">
+                <a href="#" class="btn btn-glass btn-lg">View All Trees in Marketplace</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yield Calculator -->
+    <section class="section calculator-section" id="calculator">
+        <div class="container">
+            <div class="calc-grid">
+                <div class="calc-content animate-on-scroll">
+                    <span class="section-tag">Interactive Tool</span>
+                    <h2 class="section-title">Yield Calculator</h2>
+                    <p class="section-subtitle">Play around with the numbers below to see what your trees could earn you each year.</p>
+                    <div class="calc-form">
+                        <div class="calc-input-group">
+                            <label>Number of Trees</label>
+                            <input type="range" id="calcTrees" min="1" max="50" value="5" class="calc-slider">
+                            <div class="calc-range-labels">
+                                <span>1</span>
+                                <span class="calc-current-value" id="calcTreesValue">5 Trees</span>
+                                <span>50</span>
+                            </div>
+                        </div>
+                        <div class="calc-input-group">
+                            <label>Tree Type</label>
+                            <div class="calc-type-selector">
+                                <button class="calc-type-btn active" data-type="mango" data-price="4999" data-yield="40" data-rate="800">🥭 Mango</button>
+                                <button class="calc-type-btn" data-type="coconut" data-price="3499" data-yield="150" data-rate="50">🌴 Coconut</button>
+                                <button class="calc-type-btn" data-type="cashew" data-price="5999" data-yield="15" data-rate="1200">🌰 Cashew</button>
+                            </div>
+                        </div>
+                        <div class="calc-input-group">
+                            <label>Lease Duration</label>
+                            <div class="calc-duration-selector">
+                                <button class="calc-dur-btn active" data-years="1">1 Year</button>
+                                <button class="calc-dur-btn" data-years="3">3 Years</button>
+                                <button class="calc-dur-btn" data-years="5">5 Years</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-results animate-on-scroll">
+                    <div class="calc-results-card">
+                        <h3>Your Projected Returns</h3>
+                        <div class="calc-result-grid">
+                            <div class="calc-result-item">
+                                <span class="calc-result-label">Total Investment</span>
+                                <span class="calc-result-value" id="calcInvestment">&#8377;24,995</span>
+                            </div>
+                            <div class="calc-result-item">
+                                <span class="calc-result-label">Home-Share (Produce)</span>
+                                <span class="calc-result-value" id="calcProduce">~200 kg</span>
+                            </div>
+                            <div class="calc-result-item highlight-result">
+                                <span class="calc-result-label">Commercial Revenue</span>
+                                <span class="calc-result-value" id="calcRevenue">&#8377;32,000</span>
+                            </div>
+                            <div class="calc-result-item highlight-result">
+                                <span class="calc-result-label">Your Yield Share (40%)</span>
+                                <span class="calc-result-value" id="calcYieldShare">&#8377;12,800</span>
+                            </div>
+                        </div>
+                        <div class="calc-divider"></div>
+                        <div class="calc-total">
+                            <div class="calc-total-row">
+                                <span>Net Return</span>
+                                <span class="calc-net-return" id="calcNetReturn">~15.2%</span>
+                            </div>
+                            <div class="calc-total-row sub">
+                                <span>Includes 1+1 Yield Protection</span>
+                                <span class="calc-protection-badge">🛡️ Active</span>
+                            </div>
+                        </div>
+                        <p class="calc-disclaimer">*Projections based on historical yield data. Actual returns may vary. 1+1 Protection ensures fair delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Asset Tracking -->
+    <section class="section tracking-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Transparency</span>
+                <h2 class="section-title">Real-Time<br><span class="gradient-text">Asset Tracking</span></h2>
+                <p class="section-subtitle">You'll always know what's happening with your tree - from GPS location to harvest logistics.</p>
+            </div>
+            <div class="tracking-grid">
+                <div class="tracking-card animate-on-scroll">
+                    <div class="tracking-card-icon">📡</div>
+                    <h3>Digital Twin Technology</h3>
+                    <p>Each tree has its own Asset ID and GPS pin. Think of it as a live profile for your tree - you can check in anytime.</p>
+                    <div class="tracking-visual">
+                        <div class="tracking-mock">
+                            <div class="mock-header">
+                                <span class="mock-dot green"></span>
+                                <span>Asset #TL-MH-2847 | Live</span>
+                            </div>
+                            <div class="mock-map">
+                                <div class="mock-pin pulse">📍</div>
+                                <span class="mock-coords">16.9902° N, 73.3120° E</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tracking-card animate-on-scroll">
+                    <div class="tracking-card-icon">🌸</div>
+                    <h3>Growth Updates</h3>
+                    <p>We send you bloom reports, fruiting updates, and soil health data as the season progresses. No guessing involved.</p>
+                    <div class="tracking-visual">
+                        <div class="tracking-timeline">
+                            <div class="tl-item done">
+                                <span class="tl-dot"></span>
+                                <span class="tl-text">Dormant Phase</span>
+                                <span class="tl-date">Nov '25</span>
+                            </div>
+                            <div class="tl-item done">
+                                <span class="tl-dot"></span>
+                                <span class="tl-text">Bloom Started 🌸</span>
+                                <span class="tl-date">Jan '26</span>
+                            </div>
+                            <div class="tl-item active">
+                                <span class="tl-dot"></span>
+                                <span class="tl-text">Fruiting Stage 🥭</span>
+                                <span class="tl-date">Mar '26</span>
+                            </div>
+                            <div class="tl-item">
+                                <span class="tl-dot"></span>
+                                <span class="tl-text">Harvest Ready</span>
+                                <span class="tl-date">May '26</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tracking-card animate-on-scroll">
+                    <div class="tracking-card-icon">🥭</div>
+                    <h3>Harvest Provenance</h3>
+                    <p>Fruit is hand-picked early morning, ripened naturally (no carbide), and shipped straight to you. You'll know exactly where it came from.</p>
+                    <div class="tracking-visual">
+                        <div class="provenance-chain">
+                            <div class="prov-step">
+                                <span class="prov-icon">🌳</span>
+                                <span>Farm</span>
+                            </div>
+                            <div class="prov-arrow">→</div>
+                            <div class="prov-step">
+                                <span class="prov-icon">✋</span>
+                                <span>Hand-Pick</span>
+                            </div>
+                            <div class="prov-arrow">→</div>
+                            <div class="prov-step">
+                                <span class="prov-icon">🌿</span>
+                                <span>Natural Ripen</span>
+                            </div>
+                            <div class="prov-arrow">→</div>
+                            <div class="prov-step active">
+                                <span class="prov-icon">🏠</span>
+                                <span>Your Door</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section impact-section" id="impact">
+        <div class="impact-bg"></div>
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag light">Our Impact</span>
+                <h2 class="section-title light">Making a Real<br><span class="gradient-text-light">Difference</span></h2>
+            </div>
+            <div class="impact-grid">
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-number" data-target="5000">0</div>
+                    <div class="impact-label">Trees Under Management</div>
+                    <div class="impact-icon">🌳</div>
+                </div>
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-number" data-target="350">0</div>
+                    <div class="impact-label">Farmers Empowered</div>
+                    <div class="impact-icon">👨‍🌾</div>
+                </div>
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-number" data-target="12000">0</div>
+                    <div class="impact-label">kg Produce Delivered</div>
+                    <div class="impact-icon">📦</div>
+                </div>
+                <div class="impact-card animate-on-scroll">
+                    <div class="impact-number" data-target="8500">0</div>
+                    <div class="impact-label">kg CO2 Offset Annually</div>
+                    <div class="impact-icon">🌍</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stakeholder Benefits -->
+    <section class="section benefits-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">For Everyone</span>
+                <h2 class="section-title">Why Tree Lease?</h2>
+                <p class="section-subtitle">Whether you eat the mangoes, grow them, or invest in them - there's something here for you.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon-wrap consumer">
+                        <span>🏠</span>
+                    </div>
+                    <h3>For Consumers</h3>
+                    <ul class="benefit-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Access to real, clean, traceable food
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Emotional connection to the land
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Passive income from surplus yield
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Premium chemical-free produce
+                        </li>
+                    </ul>
+                </div>
+                <div class="benefit-card animate-on-scroll featured">
+                    <div class="benefit-featured-badge">Most Impact</div>
+                    <div class="benefit-icon-wrap farmer">
+                        <span>👨‍🌾</span>
+                    </div>
+                    <h3>For Farmers</h3>
+                    <ul class="benefit-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Better monetization of farm assets
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Stable, shared-income model
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Reduced dependency on volatile markets
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Technology-enabled farm management
+                        </li>
+                    </ul>
+                </div>
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon-wrap investor">
+                        <span>📈</span>
+                    </div>
+                    <h3>For Investors</h3>
+                    <ul class="benefit-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Asset-light, scalable model
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Strong unit economics
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            New category: Agri-backed micro-assets
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            ESG-aligned portfolio addition
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">What People Say</span>
+                <h2 class="section-title">Trusted by Early Adopters</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Leased 3 Alphonso trees last year. The mangoes were unreal - best I've had. And then the yield share hit my account. Didn't expect that part to actually work this well."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RP</div>
+                        <div>
+                            <div class="testimonial-name">Rajesh Patel</div>
+                            <div class="testimonial-role">IT Professional, Mumbai</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I love getting the bloom updates. Seeing my tree flower and then fruit - it's weirdly satisfying. The 1+1 protection made me comfortable putting in more."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AS</div>
+                        <div>
+                            <div class="testimonial-name">Anita Sharma</div>
+                            <div class="testimonial-role">Doctor, Bangalore</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-on-scroll">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Before this I was at the mercy of mandi prices every season. Now I have steady income through the year. My orchard is doing better than it has in 15 years."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">VD</div>
+                        <div>
+                            <div class="testimonial-name">Vikram Desai</div>
+                            <div class="testimonial-role">Mango Farmer, Ratnagiri</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Vision -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content animate-on-scroll">
+                    <span class="section-tag">Our Vision</span>
+                    <h2 class="section-title">The Future of Wealth<br>is <span class="gradient-text">Biological</span></h2>
+                    <p>We believe the next big asset class isn't another crypto token - it's the tree in a farmer's orchard. Real, productive, and regenerative.</p>
+                    <p>AuroVil Asset Management is building the infrastructure to make that happen - connecting farmers who have the land with people who want to participate in what it produces.</p>
+                    <div class="about-vision-items">
+                        <div class="vision-item">
+                            <div class="vision-phase">Now</div>
+                            <div class="vision-text">Farmland, Orchards & Biological Assets</div>
+                        </div>
+                        <div class="vision-connector"></div>
+                        <div class="vision-item">
+                            <div class="vision-phase">Next</div>
+                            <div class="vision-text">Experiences & Rural Tourism</div>
+                        </div>
+                        <div class="vision-connector"></div>
+                        <div class="vision-item">
+                            <div class="vision-phase">Future</div>
+                            <div class="vision-text">Cultural Economy Platforms (Trevio)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-founder animate-on-scroll">
+                    <div class="founder-card">
+                        <div class="founder-quote">"The idea is straightforward - make farmland work for farmers and for the people who want to be part of it. That's what we're building here."</div>
+                        <div class="founder-info">
+                            <div class="founder-avatar">AKD</div>
+                            <div>
+                                <div class="founder-name">Abhishek K. Das</div>
+                                <div class="founder-title">Founder, Tree Lease</div>
+                                <div class="founder-company">AuroVil Asset Management Pvt. Ltd.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-grid animate-on-scroll">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What exactly do I get when I lease a tree?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You get a few things: fresh produce delivered to your home each season, a share of the revenue from whatever surplus gets sold commercially, a GPS-tracked Asset ID for your tree, and the 1+1 Yield Protection that covers you for two years.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do I own the land or the tree?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. You don't own the land and you don't run the farm. What you own is the right to the tree's yield - the fruit it produces each season. The farmer handles everything on the ground.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What is the 1+1 Yield Protection Model?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sometimes a tree has an off year - bad weather, late rains, whatever. With 1+1, your lease is 1 year standard + 1 year buffer at no extra cost. If the first year falls short, the lease extends so you still get what was promised.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How are returns calculated and distributed?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The harvest splits into two parts. You get a portion as fresh produce at home. The rest gets sold commercially, and that revenue is shared between you, the farmer, and Tree Lease. Returns typically land between 10-20% depending on the tree and the market that season.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I visit my tree?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Your tree has GPS coordinates, so you know exactly where it is. We also run seasonal farm visits where you can see your tree, meet the farmer, and even help with the harvest if you're up for it.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do I track my tree's progress?</span>
+                        <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your tree has a Digital Twin linked to its Asset ID. On your dashboard you'll see bloom reports, fruiting progress, soil health data, and harvest details. Basically a live feed of what's happening at the orchard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" id="contact">
+        <div class="container">
+            <div class="cta-card animate-on-scroll">
+                <div class="cta-content">
+                    <h2>Ready to Own a Piece<br>of India's Orchards?</h2>
+                    <p>Start with one tree. See how it works. Decide from there. It's a lot simpler than you'd expect.</p>
+                    <div class="cta-buttons">
+                        <a href="#marketplace" class="btn btn-white btn-lg">
+                            <span>Lease Your First Tree</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="mailto:hello@treelease.in" class="btn btn-ghost btn-lg">Talk to Our Team</a>
+                    </div>
+                    <div class="cta-trust">
+                        <span>🛡️ 1+1 Yield Protection</span>
+                        <span>🌱 100% Organic</span>
+                        <span>📡 GPS Tracked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <span class="logo-icon">🌳</span>
+                        <span class="logo-text">Tree<span class="logo-highlight">Lease</span></span>
+                    </a>
+                    <p class="footer-tagline">Leasing Life, Not Just Produce.</p>
+                    <p class="footer-company">An AuroVil Asset Management Pvt. Ltd. Venture</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter" class="social-link">𝕏</a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">in</a>
+                        <a href="#" aria-label="Instagram" class="social-link">📷</a>
+                        <a href="#" aria-label="YouTube" class="social-link">▶</a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Platform</h4>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#marketplace">Marketplace</a>
+                    <a href="#calculator">Yield Calculator</a>
+                    <a href="#">Gift a Tree</a>
+                    <a href="#">Farm Visits</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Company</h4>
+                    <a href="#about">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Press</a>
+                    <a href="#">Partner With Us</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Support</h4>
+                    <a href="#faq">FAQs</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Investment Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tree Lease | AuroVil Asset Management Pvt. Ltd. All rights reserved.</p>
+                <p class="footer-disclaimer">Tree Lease facilitates leasehold rights over biological assets. Returns are subject to agricultural and market conditions. Past performance does not guarantee future results.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Social Proof Toast -->
+    <div class="social-proof-toast" id="socialProofToast">
+        <div class="toast-content">
+            <span class="toast-emoji">🌳</span>
+            <div class="toast-text">
+                <strong id="toastName">Someone</strong> just leased a tree
+                <span class="toast-detail" id="toastDetail">Alphonso Mango, Ratnagiri</span>
+            </div>
+            <span class="toast-time">Just now</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
